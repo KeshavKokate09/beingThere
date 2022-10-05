@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:enabled="true"
+        android:icon="@drawable/baseline_home_black_24"
+        android:title="Home"/>
+    <item
+        android:id="@+id/scanner"
+        android:enabled="true"
+        android:icon="@drawable/baseline_qr_code_scanner_black_24"
+        android:title="Scan"/>
+    <item
+        android:id="@+id/report"
+        android:enabled="true"
+        android:icon="@drawable/baseline_text_snippet_black_24"
+        android:title="Report"/>
+    <item
+        android:id="@+id/accounts"
+        android:enabled="true"
+        android:icon="@drawable/baseline_account_circle_black_24"
+        android:title="Account"/>
+</menu>

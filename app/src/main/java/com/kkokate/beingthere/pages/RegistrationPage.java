@@ -7,7 +7,6 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.kkokate.beingthere.R;
-import com.kkokate.beingthere.models.Student;
 
 public class RegistrationPage extends AppCompatActivity {
 

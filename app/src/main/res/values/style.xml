@@ -1,0 +1,16 @@
+<resources>
+
+    <style name="Widget.Theme.BeingThere.ButtonBar.Fullscreen" parent="">
+        <item name="android:background">@color/black_overlay</item>
+        <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
+    </style>
+    <style name="Widget.App.Button.OutlinedButton.IconOnly" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="iconPadding">14dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:paddingLeft">24dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:minWidth">65dp</item>
+        <item name="android:minHeight">50dp</item>
+    </style>
+</resources>
