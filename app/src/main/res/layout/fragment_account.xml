@@ -100,5 +100,16 @@
 
     </LinearLayout>
 
+    <Button
+        android:id="@+id/signOutBtn"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="200dp"
+        android:text="Sign Out"
+        android:backgroundTint="@color/titleBackground"
+        />
+
+
 
 </LinearLayout>

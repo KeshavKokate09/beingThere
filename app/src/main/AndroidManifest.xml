@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.kkokate.beingthere">
+    package="com.kkokate.markP">
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -17,7 +17,7 @@
         android:theme="@style/Theme.BeingThere"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name="com.kkokate.markP.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,8 +25,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-       <activity android:name=".pages.RegistrationPage"/>
-        <activity android:name=".pages.HomePage"/>
+       <activity android:name="com.kkokate.markP.pages.RegistrationPage"/>
+        <activity android:name="com.kkokate.markP.pages.HomePage"/>
+        <activity android:name=".pages.AuthenticationPage"/>
     </application>
 
 </manifest>
