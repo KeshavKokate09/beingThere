@@ -44,14 +44,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="50dp">
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center"
+        android:gravity="center">
         <Button
             android:id="@+id/logInBtn"
             android:layout_width="150dp"
             android:layout_height="60dp"
             android:text="Log In"
             android:backgroundTint="@color/black_overlay"
-            android:layout_marginStart="40dp"
             />
 
         <Button

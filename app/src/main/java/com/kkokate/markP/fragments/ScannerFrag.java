@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.google.zxing.Result;
 import com.kkokate.markP.R;
@@ -73,6 +74,15 @@ public class ScannerFrag extends Fragment implements ZXingScannerView.ResultHand
 
     @Override
     public void handleResult(Result result) {
-
+        try {
+            String qrCodeValue = result.getText();
+            if(qrCodeValue!=null){
+                Toast.makeText(appContext, qrCodeValue, Toast.LENGTH_LONG).show();
+            }else{
+                Toast.makeText(appContext, "Scan QR code only", Toast.LENGTH_LONG).show();
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 }

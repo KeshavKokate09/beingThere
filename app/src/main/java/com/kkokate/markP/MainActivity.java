@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected Button studBtn;
     protected Button teacherBtn;
     protected FirebaseUser currentUser;
+    protected TextView logInTextBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +49,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         teacherBtn= findViewById(R.id.adminBtn);
         teacherBtn.setOnClickListener(this);
+
+        logInTextBtn =findViewById(R.id.logInTextBtn);
+        logInTextBtn.setOnClickListener(this);
     }
 
     private void goToRegistrationPage(User userType){
@@ -61,10 +66,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             goToRegistrationPage(User.STUDENT);
         }else if(view.equals(teacherBtn)){
             goToRegistrationPage(User.ORGANIZATION);
+        } else if(view.equals(logInTextBtn)){
+            goToRegistrationPage(User.ORGANIZATION);
         }
     }
 
-    public void goToRegistrationPage(View view) {
-        goToRegistrationPage(User.STUDENT);
-    }
 }

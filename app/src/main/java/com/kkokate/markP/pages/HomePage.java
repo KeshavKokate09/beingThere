@@ -1,6 +1,7 @@
 package com.kkokate.markP.pages;
 
 import static com.kkokate.markP.constants.IntentConstants.AUTH_USER;
+import static com.kkokate.markP.constants.IntentConstants.USER_TYPE;
 
 import android.os.Bundle;
 
@@ -13,19 +14,23 @@ import com.google.firebase.auth.FirebaseUser;
 import com.kkokate.markP.R;
 import com.kkokate.markP.fragments.AccountFrag;
 import com.kkokate.markP.fragments.HomeFrag;
+import com.kkokate.markP.fragments.QrGenerator;
 import com.kkokate.markP.fragments.ReportFrag;
 import com.kkokate.markP.fragments.ScannerFrag;
+import com.kkokate.markP.models.User;
 
 public class HomePage extends AppCompatActivity{
     protected BottomNavigationView bottomNav;
     protected Fragment selectedFragment;
     private FirebaseUser cUser;
+    private String userType;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
         cUser=getIntent().getParcelableExtra(AUTH_USER);
+        userType=getIntent().getStringExtra(USER_TYPE);
         if(cUser!=null) {
             initUi();
         }
@@ -40,7 +45,12 @@ public class HomePage extends AppCompatActivity{
             if (itemId == R.id.home) {
                 selectedFragment = new HomeFrag(cUser);
             } else if (itemId == R.id.scanner) {
-                selectedFragment = new ScannerFrag(HomePage.this);
+                if(userType.equals(User.ORGANIZATION.getDescription())){
+                    selectedFragment = new QrGenerator(HomePage.this);
+
+                }else {
+                    selectedFragment = new ScannerFrag(HomePage.this);
+                }
             } else if (itemId == R.id.report) {
                 selectedFragment = new ReportFrag();
             }else if (itemId == R.id.accounts) {

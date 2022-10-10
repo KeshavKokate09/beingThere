@@ -3,6 +3,7 @@ package com.kkokate.markP.pages;
 import static android.content.ContentValues.TAG;
 
 import static com.kkokate.markP.constants.IntentConstants.AUTH_USER;
+import static com.kkokate.markP.constants.IntentConstants.USER_TYPE;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -89,7 +90,7 @@ public class AuthenticationPage extends AppCompatActivity implements View.OnClic
     private void goToHomePage(FirebaseUser user) {
         Intent intent = new Intent(this,HomePage.class);
         intent.putExtra(AUTH_USER, user);
-        intent.putExtra("USER_TYPE", userType);
+        intent.putExtra(USER_TYPE, userType);
         startActivity(intent);
     }
 

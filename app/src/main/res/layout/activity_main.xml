@@ -17,41 +17,42 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Who Are You ?"
-            android:layout_marginTop="200dp"
-            android:layout_marginStart="40dp"
+            android:layout_marginTop="100dp"
             android:textSize="45sp"
             android:gravity="center"
-            />
+            android:layout_gravity="center" />
         <Button
             android:id="@+id/studentBtn"
             android:layout_marginTop="80dp"
-            android:layout_marginStart="80dp"
+            android:layout_gravity="center"
             android:layout_width="250dp"
-            android:layout_height="70dp"
+            android:layout_height="65dp"
             android:text="Student" />
 
         <Button
             android:id="@+id/adminBtn"
             android:layout_width="250dp"
-            android:layout_height="70dp"
-            android:layout_marginStart="80dp"
-            android:layout_marginTop="30dp"
+            android:layout_height="65dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
             android:text="Organization"
             />
+
+        <TextView
+            android:layout_marginTop="140dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already Registered"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/logInTextBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Log in"
+            android:layout_gravity="center"
+            android:textColor="@color/purple_700" />
     </LinearLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Already Registered"
-        android:layout_gravity="center"/>
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="sign in"
-        android:textColor="@color/purple_700"
-        android:onClick="goToRegistrationPage"
-        />
 
 </LinearLayout>
