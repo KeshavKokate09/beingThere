@@ -63,5 +63,8 @@ public class HomePage extends AppCompatActivity{
         });
     }
 
-
+    @Override
+    public void onBackPressed() {
+        super.moveTaskToBack(true);
+    }
 }

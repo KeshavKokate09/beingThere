@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
@@ -24,7 +25,7 @@ public class QrGenerator extends Fragment {
     private View view;
     private Button generateQrBtn;
     private ImageView qrImage;
-    private EditText datePickerText;
+    private TextView datePickerText;
     private Context appContext;
     final Calendar calender = Calendar.getInstance();
 

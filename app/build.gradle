@@ -36,6 +36,7 @@ android {
 
 dependencies {
     implementation files('libs/qrgen-android-2.5.0.jar')
+    implementation files('libs/qrgen-core-2.5.0.jar')
 
     implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation 'com.google.android.material:material:1.6.1'

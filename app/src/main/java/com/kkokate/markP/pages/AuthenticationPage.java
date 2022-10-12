@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -28,9 +29,13 @@ import com.kkokate.markP.R;
 public class AuthenticationPage extends AppCompatActivity implements View.OnClickListener {
 
     protected Button logInBtn;
+    protected Button cancelBtn;
     protected Button signInBtn;
     protected EditText userName;
     protected EditText password;
+    protected EditText name;
+    protected EditText phone;
+    protected TextView signUpLink;
 
     private FirebaseAuth mAuth;
     private String userType;
@@ -39,7 +44,7 @@ public class AuthenticationPage extends AppCompatActivity implements View.OnClic
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_authentication_page);
-        userType =getIntent().getStringExtra("USER_TYPE");
+        userType =getIntent().getStringExtra(USER_TYPE);
         initUi();
         FirebaseApp.initializeApp(this);
         mAuth = FirebaseAuth.getInstance();
@@ -51,12 +56,21 @@ public class AuthenticationPage extends AppCompatActivity implements View.OnClic
 
     private void initUi() {
         logInBtn = findViewById(R.id.logInBtn);
+        cancelBtn = findViewById(R.id.cancelBtn);
         signInBtn = findViewById(R.id.signInBtn);
+        signInBtn.setVisibility(View.INVISIBLE);
         userName = findViewById(R.id.userText);
         password = findViewById(R.id.passwordText);
+        name = findViewById(R.id.fullNameText);
+        name.setVisibility(View.INVISIBLE);
+        phone = findViewById(R.id.phoneText);
+        phone.setVisibility(View.INVISIBLE);
+        signUpLink = findViewById(R.id.signUpLink);
 
         logInBtn.setOnClickListener(this);
         signInBtn.setOnClickListener(this);
+        cancelBtn.setOnClickListener(this);
+        signUpLink.setOnClickListener(this);
     }
 
     @Override
@@ -65,6 +79,15 @@ public class AuthenticationPage extends AppCompatActivity implements View.OnClic
             signIn(userName.getText().toString(),password.getText().toString());
         }else if(view.equals(signInBtn)){
             createAccount(userName.getText().toString(),password.getText().toString());
+        }else if(view.equals(cancelBtn)){
+            createAccount(userName.getText().toString(),password.getText().toString());
+        }else if(view.equals(signUpLink)){
+           logInBtn.setVisibility(View.GONE);
+           cancelBtn.setVisibility(View.GONE);
+           signUpLink.setVisibility(View.GONE);
+           name.setVisibility(View.VISIBLE);
+           phone.setVisibility(View.VISIBLE);
+           signInBtn.setVisibility(View.VISIBLE);
         }
     }
 

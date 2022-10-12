@@ -4,20 +4,24 @@
         android:id="@+id/home"
         android:enabled="true"
         android:icon="@drawable/baseline_home_black_24"
-        android:title="Home"/>
+        android:title="Home"
+        android:iconTint="@color/white"/>
     <item
         android:id="@+id/scanner"
         android:enabled="true"
         android:icon="@drawable/baseline_qr_code_scanner_black_24"
-        android:title="Scan"/>
+        android:title="Scan"
+        android:iconTint="@color/white"/>
     <item
         android:id="@+id/report"
         android:enabled="true"
         android:icon="@drawable/baseline_text_snippet_black_24"
-        android:title="Report"/>
+        android:title="Report"
+        android:iconTint="@color/white"/>
     <item
         android:id="@+id/accounts"
         android:enabled="true"
         android:icon="@drawable/baseline_account_circle_black_24"
-        android:title="Account"/>
+        android:title="Account"
+        android:iconTint="@color/white"/>
 </menu>

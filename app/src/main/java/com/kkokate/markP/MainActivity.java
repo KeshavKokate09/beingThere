@@ -1,6 +1,7 @@
 package com.kkokate.markP;
 
 import static com.kkokate.markP.constants.IntentConstants.AUTH_USER;
+import static com.kkokate.markP.constants.IntentConstants.USER_TYPE;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,8 +16,6 @@ import com.google.firebase.auth.FirebaseUser;
 import com.kkokate.markP.models.User;
 import com.kkokate.markP.pages.AuthenticationPage;
 import com.kkokate.markP.pages.HomePage;
-import com.kkokate.markP.pages.RegistrationPage;
-import com.kkokate.markP.service.AppConfigService;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -56,7 +55,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void goToRegistrationPage(User userType){
        Intent intent = new Intent(this, AuthenticationPage.class);
-       intent.putExtra("USER_TYPE",userType.getDescription());
+       intent.putExtra(USER_TYPE,userType.getDescription());
         startActivity(intent);
     }
 

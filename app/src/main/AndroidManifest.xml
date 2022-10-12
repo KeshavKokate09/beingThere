@@ -14,7 +14,7 @@
         android:label="MarkP"
         android:roundIcon="@drawable/baseline_qr_code_scanner_black_24"
         android:supportsRtl="true"
-        android:theme="@style/Theme.BeingThere"
+        android:theme="@style/Theme.Material3.DayNight"
         tools:targetApi="31">
         <activity
             android:name="com.kkokate.markP.MainActivity"
@@ -25,7 +25,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-       <activity android:name="com.kkokate.markP.pages.RegistrationPage"/>
         <activity android:name="com.kkokate.markP.pages.HomePage"/>
         <activity android:name=".pages.AuthenticationPage"/>
     </application>

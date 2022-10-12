@@ -26,7 +26,8 @@
             android:layout_height="50dp"
             android:padding="4dp"
             android:layout_marginTop="10dp"
-            android:hint="    USER NAME "
+            android:hint="Email Address"
+            android:gravity="center"
             android:inputType="textEmailAddress"/>
 
         <EditText
@@ -35,16 +36,46 @@
             android:layout_height="50dp"
             android:padding="4dp"
             android:layout_marginTop="10dp"
-            android:hint="    PASSWORD"
+            android:hint="Password"
+            android:gravity="center"
             android:inputType="textPassword"/>
 
+        <EditText
+            android:id="@+id/fullNameText"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:padding="4dp"
+            android:layout_marginTop="10dp"
+            android:hint="Name"
+            android:gravity="center"
+            android:inputType="text"/>
+
+        <EditText
+            android:id="@+id/phoneText"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:padding="4dp"
+            android:layout_marginTop="10dp"
+            android:hint="Phone Number"
+            android:gravity="center"
+            android:inputType="number"/>
+
+        <TextView
+            android:id="@+id/signUpLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="sign up"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/design_default_color_primary_dark"/>
     </LinearLayout>
+
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:layout_gravity="center"
         android:gravity="center">
         <Button
@@ -52,19 +83,30 @@
             android:layout_width="150dp"
             android:layout_height="60dp"
             android:text="Log In"
-            android:backgroundTint="@color/black_overlay"
+            android:backgroundTint="@color/titleBackground"
+            android:textColor="@color/white"
             />
 
         <Button
-            android:id="@+id/signInBtn"
+            android:id="@+id/cancelBtn"
             android:layout_width="150dp"
             android:layout_height="60dp"
-            android:text="Sign In"
-            android:backgroundTint="@color/white"
+            android:text="Cancel"
+            android:backgroundTint="@color/titleBackground"
             android:layout_marginStart="40dp"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             />
     </LinearLayout>
 
+    <Button
+        android:id="@+id/signInBtn"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="Sign In"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@color/black_overlay"
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+        />
 
 </LinearLayout>

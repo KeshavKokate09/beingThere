@@ -27,6 +27,7 @@
             android:layout_gravity="center"
             android:layout_width="250dp"
             android:layout_height="65dp"
+            android:backgroundTint="@color/titleBackground"
             android:text="Student" />
 
         <Button
@@ -35,6 +36,7 @@
             android:layout_height="65dp"
             android:layout_gravity="center"
             android:layout_marginTop="25dp"
+            android:backgroundTint="@color/titleBackground"
             android:text="Organization"
             />
 
