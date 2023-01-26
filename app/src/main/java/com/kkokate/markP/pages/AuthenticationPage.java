@@ -24,7 +24,13 @@ import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.kkokate.markP.R;
+import com.kkokate.markP.database.FireBaseAuth;
+import com.kkokate.markP.database.RealDB;
+
+import java.util.Objects;
 
 public class AuthenticationPage extends AppCompatActivity implements View.OnClickListener {
 
@@ -39,6 +45,8 @@ public class AuthenticationPage extends AppCompatActivity implements View.OnClic
 
     private FirebaseAuth mAuth;
     private String userType;
+    DatabaseReference myRef;
+    FirebaseUser currentUser;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -46,9 +54,8 @@ public class AuthenticationPage extends AppCompatActivity implements View.OnClic
         setContentView(R.layout.activity_authentication_page);
         userType =getIntent().getStringExtra(USER_TYPE);
         initUi();
-        FirebaseApp.initializeApp(this);
-        mAuth = FirebaseAuth.getInstance();
-        FirebaseUser currentUser = mAuth.getCurrentUser();
+        mAuth = FireBaseAuth.getInstance(this);
+        currentUser = mAuth.getCurrentUser();
         if(currentUser != null){
             goToHomePage(currentUser);
         }
@@ -78,9 +85,11 @@ public class AuthenticationPage extends AppCompatActivity implements View.OnClic
         if(view.equals(logInBtn)) {
             signIn(userName.getText().toString(),password.getText().toString());
         }else if(view.equals(signInBtn)){
+            myRef = RealDB.getInstance().getReference(Objects.requireNonNull(userName.getText().toString().split("@")[0].toLowerCase()));
+            myRef.setValue(userType);
             createAccount(userName.getText().toString(),password.getText().toString());
         }else if(view.equals(cancelBtn)){
-            createAccount(userName.getText().toString(),password.getText().toString());
+           //ToDo
         }else if(view.equals(signUpLink)){
            logInBtn.setVisibility(View.GONE);
            cancelBtn.setVisibility(View.GONE);

@@ -12,7 +12,7 @@
         android:layout_height="128dp"
         android:layout_marginStart="124dp"
         android:layout_marginTop="52dp"
-        android:background="@drawable/round"
+        android:background="@drawable/d_profile"
         />
 
     <TextView
@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="120dp"
         android:gravity="center"
-        android:text="Keshav Kokate"
+        android:text=""
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"/>
@@ -45,7 +45,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="20dp"
-            android:text="Modern College Of Engineering "
+            android:text=""
             android:textColor="@color/black" />
 
     </LinearLayout>
@@ -69,7 +69,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
-            android:text="MCA "
+            android:text=""
             android:textColor="@color/black"
             />
 
@@ -94,7 +94,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
-            android:text=" 52041"
+            android:text=""
             android:textColor="@color/black"
             />
 

@@ -9,7 +9,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -64,6 +63,7 @@ public class QrGenerator extends Fragment {
     public static Bitmap generateQRCodeBitmap(String qrCodeValue)
     {
         Bitmap bitmap = null;
+      //  QRGEncoder qrgEncoder = new QRGEncoder(dataEdt.getText().toString(), null, QRGContents.Type.TEXT, dimen);
         QRCode qrCode = QRCode.from(qrCodeValue);
         if(qrCode != null)
         {
