@@ -12,7 +12,7 @@
         android:layout_height="128dp"
         android:layout_marginStart="124dp"
         android:layout_marginTop="52dp"
-        android:background="@drawable/d_profile"
+        android:background="@drawable/baseline_account_circle_black_24"
         />
 
     <TextView

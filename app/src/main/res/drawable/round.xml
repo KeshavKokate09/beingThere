@@ -2,6 +2,6 @@
 <layer-list
     xmlns:android="http://schemas.android.com/apk/res/android" >
     <!-- set image to be shown on circular ImageView -->
-    <item android:drawable="@drawable/_cropped"/>
+    <item android:drawable="@drawable/baseline_account_circle_black_24"/>
     <item android:drawable="@drawable/ellipse"/>
 </layer-list>
